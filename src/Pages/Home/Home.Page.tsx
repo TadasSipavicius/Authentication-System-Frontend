@@ -1,4 +1,4 @@
-import { Box, Button, Container, Stack, TextField, Typography } from '@mui/material';
+import { Box, Button, Container, Divider, Stack, TextField, Typography } from '@mui/material';
 import React from 'react';
 
 export default function HomePage() {
@@ -12,7 +12,7 @@ export default function HomePage() {
                     flexDirection: 'column',
                     alignItems: 'center',
                     backgroundColor: "#39A0C6",
-                    boxShadow: " rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset"
+                    boxShadow: "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;"
                 }}
             >
                 <Box sx={{ width: "100%", height: 200, borderBottomRightRadius: "200px 200px", backgroundImage: "linear-gradient(to right, #ff512f, #f09819)", marginBottom: 4 }}>
@@ -33,7 +33,7 @@ export default function HomePage() {
 
 
                 <Box>
-                    <Typography sx={{marginLeft: 2.5, fontSize: 13}}>
+                    <Typography sx={{ marginLeft: 2.5, fontSize: 13, color: "white", letterSpacing: 0.9 }}>
                         Username
                     </Typography>
                     <TextField
@@ -50,7 +50,7 @@ export default function HomePage() {
                     />
                 </Box>
                 <Box sx={{ marginTop: 2 }}>
-                    <Typography sx={{marginLeft: 2.5, fontSize: 13}}>
+                    <Typography sx={{ marginLeft: 2.5, fontSize: 13, color: "white", letterSpacing: 0.9 }}>
                         Password
                     </Typography>
                     <TextField
@@ -67,7 +67,25 @@ export default function HomePage() {
                     />
                 </Box>
 
-                <Button>Login</Button>
+                <Button size='large'
+                    sx={{ fontSize: 14, width: 150, borderRadius: 20, backgroundImage: "linear-gradient(to right, #ff512f, #f09819)", marginTop: 3.5, marginBottom: 3.5, textTransform: "uppercase" }}>
+                    Login
+                </Button>
+
+                <Divider variant="middle" sx={{ width: "80%" }} />
+                <Typography sx={{ fontSize: 13, marginTop: 1, color: "rgba(255,255,255, 0.7)" }}>
+                    Forgot Password?
+                </Typography>
+                <Box sx={{display: "flex", flexDirection: "row", marginTop: 4}}>
+                    <Typography sx={{ fontSize: 14, marginTop: 1, color: "rgba(255,255,255, 0.7)" }}>
+                        Don't have an account?
+
+                    </Typography>
+                    <Typography sx={{ fontSize: 14, marginTop: 1, color: "rgba(255,255,255, 0.7)", marginLeft: 1 }}>
+                        Sign up
+                    </Typography>
+                </Box>
+
             </Box>
         </Container >
     )

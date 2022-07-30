@@ -8,17 +8,15 @@ export default function NavigationBar() {
             <Toolbar disableGutters>
                 <Container maxWidth={false} sx={{ display: "flex", flexDirection: "row", float: "right", justifyContent: "space-between" }}>
                     <Box sx={{ display: "flex", alignItems: "center" }}>
-                        <Link sx={{ fontSize: 20, fontFamily: "PT Sans Narrow, sans-serif", color: "white", textDecoration: "none" }} component={Link} href="/">
+                        <Link sx={{ fontSize: 24, fontFamily: "PT Sans Narrow, sans-serif", color: "white", textDecoration: "none" }} component={Link} href="/">
                             AuthTS
                         </Link>
                     </Box>
 
                     <Box sx={{ float: "right" }}>
-                        <Button sx={{ color: "white" }}>Sign up</Button>
-                        <Button sx={{ color: "white" }}>Register</Button>
+                        <Button sx={{ color: "white", fontSize: 16, marginRight: 1 }}>Sign up</Button>
+                        <Button sx={{ color: "white", fontSize: 16 }}>Register</Button>
                     </Box>
-
-
                 </Container>
             </Toolbar>
         </AppBar >
