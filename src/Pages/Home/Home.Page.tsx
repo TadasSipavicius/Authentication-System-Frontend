@@ -12,7 +12,7 @@ export default function HomePage() {
                     flexDirection: 'column',
                     alignItems: 'center',
                     backgroundColor: "#39A0C6",
-                    boxShadow: "rgb(0 0 0 / 25%) 0px 14px 28px, rgb(0 0 0 / 22%) 0px 10px 10px"
+                    boxShadow: " rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset"
                 }}
             >
                 <Box sx={{ width: "100%", height: 200, borderBottomRightRadius: "200px 200px", backgroundImage: "linear-gradient(to right, #ff512f, #f09819)", marginBottom: 4 }}>
