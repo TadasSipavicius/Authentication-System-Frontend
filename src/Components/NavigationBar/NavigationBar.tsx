@@ -1,18 +1,17 @@
-import { AppBar, Box, Button, Container, Toolbar, Typography } from '@mui/material';
+import { AppBar, Box, Button, Container, Link, Toolbar } from '@mui/material';
 import React from 'react';
 
 export default function NavigationBar() {
 
     return (
-        <AppBar position="sticky" elevation={4} sx={{ height: 70, justifyContent: "center", background: 'transparent'}} >
-            <Toolbar>
-                <Container sx={{ display: "flex", flexDirection: "row", float: "right", justifyContent: "space-between" }}>
+        <AppBar position="sticky" sx={{ height: 70, justifyContent: "center", background: 'transparent', borderBottom: "1px solid white", boxShadow: "none" }} >
+            <Toolbar disableGutters>
+                <Container maxWidth={false} sx={{ display: "flex", flexDirection: "row", float: "right", justifyContent: "space-between" }}>
                     <Box sx={{ display: "flex", alignItems: "center" }}>
-                        <Typography>
+                        <Link sx={{ fontSize: 20, fontFamily: "PT Sans Narrow, sans-serif", color: "white", textDecoration: "none" }} component={Link} href="/">
                             AuthTS
-                        </Typography>
+                        </Link>
                     </Box>
-
 
                     <Box sx={{ float: "right" }}>
                         <Button sx={{ color: "white" }}>Sign up</Button>
