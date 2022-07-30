@@ -11,10 +11,11 @@ export default function HomePage() {
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
-                    border: "1px solid white"
+                    backgroundColor: "#39A0C6",
+                    boxShadow: "rgb(0 0 0 / 25%) 0px 14px 28px, rgb(0 0 0 / 22%) 0px 10px 10px"
                 }}
             >
-                <Box sx={{ width: "100%", height: 200, backgroundColor: "orange", borderBottomRightRadius: "200px 200px", backgroundImage: "linear-gradient(to right, #ff512f, #f09819)", marginBottom: 4 }}>
+                <Box sx={{ width: "100%", height: 200, borderBottomRightRadius: "200px 200px", backgroundImage: "linear-gradient(to right, #ff512f, #f09819)", marginBottom: 4 }}>
                     <Stack sx={{ marginTop: 4, color: "#fff", margin: "0px 0px 0px 30px", height: "100%", justifyContent: "center" }}>
                         <Stack
                             sx={{ fontSize: "2rem" }}
@@ -39,7 +40,8 @@ export default function HomePage() {
                         size='small'
                         sx={{
                             "& .MuiInputBase-root": {
-                                borderRadius: 20
+                                borderRadius: 20,
+                                backgroundColor: "rgba(255,255,255, 0.7)"
                             },
                             "& .MuiInputBase-input": {
                                 width: 300
@@ -55,7 +57,8 @@ export default function HomePage() {
                         size='small'
                         sx={{
                             "& .MuiInputBase-root": {
-                                borderRadius: 20
+                                borderRadius: 20,
+                                backgroundColor: "rgba(255,255,255, 0.7)"
                             },
                             "& .MuiInputBase-input": {
                                 width: 300
