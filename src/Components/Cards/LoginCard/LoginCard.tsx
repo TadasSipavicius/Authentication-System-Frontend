@@ -3,7 +3,7 @@ import { Divider } from '@mui/material';
 import LoginCardCredentialsForm from './LoginCardCredentialsForm/LoginCardCredentialsForm';
 import LoginCardFooter from './LoginCardFooter/LoginCardFooter';
 
-export default function LoginCard() {
+const LoginCard = () => {
 
     return (
         <>
@@ -13,3 +13,5 @@ export default function LoginCard() {
         </>
     )
 }
+
+export default LoginCard;

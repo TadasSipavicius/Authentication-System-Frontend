@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Box, Button, TextField, Typography } from '@mui/material';
 import styles from './LoginCardCredentialsForm.Styling';
 
-export default function LoginCardCredentialsForm() {
+const LoginCardCredentialsForm = () => {
 
     return (
         <>
@@ -36,3 +36,5 @@ export default function LoginCardCredentialsForm() {
 
     )
 }
+
+export default LoginCardCredentialsForm;

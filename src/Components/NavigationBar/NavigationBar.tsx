@@ -2,7 +2,7 @@ import { AppBar, Box, Button, Container, Link, Toolbar } from '@mui/material';
 import styles from './NavigationBar.Styling';
 import * as React from 'react';
 
-export default function NavigationBar() {
+const NavigationBar = () => {
 
     return (
         <AppBar position="sticky" sx={styles.appBar}>
@@ -27,3 +27,5 @@ export default function NavigationBar() {
         </AppBar >
     )
 }
+
+export default NavigationBar;

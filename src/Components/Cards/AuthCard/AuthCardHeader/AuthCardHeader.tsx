@@ -3,7 +3,7 @@ import { Box, Stack } from '@mui/material';
 import styles from './AuthCardHeader.Styling';
 
 
-export default function AuthCardHeader() {
+const AuthCardHeader = () => {
 
     return (
         <Box sx={styles.headerContainer}>
@@ -19,3 +19,5 @@ export default function AuthCardHeader() {
         </Box>
     )
 }
+
+export default AuthCardHeader;

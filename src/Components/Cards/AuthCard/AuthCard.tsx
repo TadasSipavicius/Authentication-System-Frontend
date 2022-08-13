@@ -7,7 +7,7 @@ interface IAuthCardProps {
     children: React.ReactNode;
 }
 
-export default function AuthCard({ children }: IAuthCardProps) {
+const AuthCard = ({ children }: IAuthCardProps) => {
 
     return (
         <Container fixed sx={styles.authCardContainer}>
@@ -19,3 +19,5 @@ export default function AuthCard({ children }: IAuthCardProps) {
 
     )
 }
+
+export default AuthCard;

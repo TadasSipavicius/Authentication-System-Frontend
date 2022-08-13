@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export default function RegisterCard(){
+const RegisterCard = () => {
 
     return(
         <div>
@@ -8,3 +8,5 @@ export default function RegisterCard(){
         </div>
     )
 }
+
+export default RegisterCard;

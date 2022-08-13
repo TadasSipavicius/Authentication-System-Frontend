@@ -1,9 +1,11 @@
 import * as React from 'react';
 
-export default function UserProfilePage() {
+const UserProfilePage = () => {
     return (
         <div>
             User Profile Page
         </div>
     )
 }
+
+export default UserProfilePage;

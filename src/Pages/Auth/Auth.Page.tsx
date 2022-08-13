@@ -1,9 +1,9 @@
 import * as React from 'react';
 import AuthCard from '../../Components/Cards/AuthCard/AuthCard';
-import AuthPageSelectedCard from '../../Components/Layout/AuthPageSelectedCard';
+import AuthPageSelectedCard from '../../Layout/AuthPageSelectedCard';
 import { AuthSelectedCardContext } from '../../Globals/Context';
 
-export default function AuthPage() {
+const AuthPage = () => {
 
     const [selectedCard, setSelectedCard] = React.useState('Auth');
 
@@ -18,3 +18,5 @@ export default function AuthPage() {
         </>
     )
 }
+
+export default AuthPage;
