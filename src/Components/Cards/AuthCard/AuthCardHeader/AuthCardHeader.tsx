@@ -1,8 +1,9 @@
-import { Box, Stack } from '@mui/material';
 import * as React from 'react';
-import styles from './LoginCardHeader.Styling';
+import { Box, Stack } from '@mui/material';
+import styles from './AuthCardHeader.Styling';
 
-export default function LoginCardHeader() {
+
+export default function AuthCardHeader() {
 
     return (
         <Box sx={styles.headerContainer}>
@@ -14,7 +15,6 @@ export default function LoginCardHeader() {
                 <Stack sx={styles.projectNameText}>
                     AuthTS
                 </Stack>
-
             </Stack>
         </Box>
     )

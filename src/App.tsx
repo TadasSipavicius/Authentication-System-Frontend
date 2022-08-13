@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import NavigationBar from './Components/NavigationBar/NavigationBar';
 import { theme } from './Globals/Theme';
 
-const HomePage = React.lazy(() => import("./Pages/Home/Home.Page"));
+const AuthPage = React.lazy(() => import("./Pages/Auth/Auth.Page"));
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <NavigationBar />
 
       <Routes>
-        <Route path='/' element={<HomePage />} />
+        <Route path='/' element={<AuthPage />} />
       </Routes>
 
     </ThemeProvider>

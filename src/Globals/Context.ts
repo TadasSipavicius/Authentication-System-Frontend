@@ -1,4 +1,4 @@
 import * as React from 'react';
-import { SelectedCardType } from './ContextTypes';
+import { AuthSelectedCardType } from './ContextTypes';
 
-export const SelectedCardContext = React.createContext<SelectedCardType | null>(null);
+export const AuthSelectedCardContext = React.createContext<AuthSelectedCardType | null>(null);

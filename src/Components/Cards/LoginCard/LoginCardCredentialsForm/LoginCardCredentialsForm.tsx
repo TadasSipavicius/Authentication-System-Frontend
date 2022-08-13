@@ -1,8 +1,8 @@
-import { Box, Button, TextField, Typography } from '@mui/material';
 import * as React from 'react';
-import styles from './LoginCardBody.Styling';
+import { Box, Button, TextField, Typography } from '@mui/material';
+import styles from './LoginCardCredentialsForm.Styling';
 
-export default function LoginCardBody() {
+export default function LoginCardCredentialsForm() {
 
     return (
         <>
