@@ -4,10 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import NavigationBar from './Components/NavigationBar/NavigationBar';
 import { theme } from './Globals/Theme';
 
-const LoginPage = React.lazy(() => import("./Pages/Login/Login.Page"));
-const RegisterPage = React.lazy(() => import("./Pages/Register/Register.Page"));
-const ForgotPasswordPage = React.lazy(() => import("./Pages/ForgotPassowrd/ForgotPassword.Page"));
-const UserProfilePage = React.lazy(() => import("./Pages/UserProfile/UserProfile.Page"));
+const HomePage = React.lazy(() => import("./Pages/Home/Home.Page"));
 
 function App() {
   return (
@@ -16,12 +13,9 @@ function App() {
       <NavigationBar />
 
       <Routes>
-        <Route path='/' element={<LoginPage />} />
-        <Route path='/register' element={<RegisterPage />} />
-        <Route path='/forgotpassword' element={<ForgotPasswordPage />} />
-        <Route path='/userprofile' element={<UserProfilePage />} />
+        <Route path='/' element={<HomePage />} />
       </Routes>
-        
+
     </ThemeProvider>
   );
 }

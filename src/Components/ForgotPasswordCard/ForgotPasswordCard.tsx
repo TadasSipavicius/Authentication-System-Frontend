@@ -1,10 +1,10 @@
 import * as React from 'react';
 
-export default function RegisterPage(){
+export default function ForgotPasswordCard(){
 
     return(
         <div>
-            Register Page
+            Forgot password
         </div>
     )
 }
