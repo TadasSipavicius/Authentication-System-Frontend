@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useContext } from 'react';
 import { AuthSelectedCardContext } from '../Globals/Context';
 import { AuthSelectedCardType } from '../Globals/ContextTypes';
 import ForgotPasswordCard from '../Components/Cards/ForgotPasswordCard/ForgotPasswordCard';
@@ -8,7 +8,7 @@ import RegisterCard from '../Components/Cards/RegisterCard/RegisterCard';
 
 const AuthPageSelectedCard = () => {
 
-    const { selectedCard } = React.useContext(AuthSelectedCardContext) as AuthSelectedCardType;
+    const { selectedCard } = useContext(AuthSelectedCardContext) as AuthSelectedCardType;
 
 
     //Use reducer hook ??

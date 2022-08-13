@@ -1,12 +1,12 @@
+import React, { useContext } from 'react';
 import { Box, Typography } from '@mui/material';
-import * as React from 'react';
 import { AuthSelectedCardContext } from '../../../../Globals/Context';
 import { AuthSelectedCardType } from '../../../../Globals/ContextTypes';
 import styles from './LoginCardFooter.Styling';
 
 const LoginCardFooter = () => {
 
-    const { setSelectedCard } = React.useContext(AuthSelectedCardContext) as AuthSelectedCardType;
+    const { setSelectedCard } = useContext(AuthSelectedCardContext) as AuthSelectedCardType;
 
     const handleForgotPasswordClick = (): void => {
 

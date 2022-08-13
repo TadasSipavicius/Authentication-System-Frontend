@@ -1,6 +1,6 @@
+import React from 'react';
 import { AppBar, Box, Button, Container, Link, Toolbar } from '@mui/material';
 import styles from './NavigationBar.Styling';
-import * as React from 'react';
 
 const NavigationBar = () => {
 

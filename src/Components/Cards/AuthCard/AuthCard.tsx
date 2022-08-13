@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Box, Container } from '@mui/material';
 import styles from './AuthCard.Styling';
 import AuthCardHeader from './AuthCardHeader/AuthCardHeader';

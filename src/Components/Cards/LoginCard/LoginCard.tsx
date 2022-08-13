@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Divider } from '@mui/material';
 import LoginCardCredentialsForm from './LoginCardCredentialsForm/LoginCardCredentialsForm';
 import LoginCardFooter from './LoginCardFooter/LoginCardFooter';
