@@ -1,5 +1,5 @@
 import { Box, Stack } from '@mui/material';
-import React from 'react';
+import * as React from 'react';
 import styles from './LoginCardHeader.Styling';
 
 export default function LoginCardHeader() {

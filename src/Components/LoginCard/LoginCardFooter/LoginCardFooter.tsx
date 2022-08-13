@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import React from 'react';
+import * as React from 'react';
 import styles from './LoginCardFooter.Styling';
 
 export default function LoginCardFooter() {
