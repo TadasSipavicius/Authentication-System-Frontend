@@ -13,6 +13,11 @@ const LoginCardFooter = () => {
         setSelectedCard('ForgotPassword');
     };
 
+    const handleSignInClick = (): void => {
+
+        setSelectedCard('Register');
+    }
+
     return (
         <>
             <Typography
@@ -27,7 +32,10 @@ const LoginCardFooter = () => {
                     Don't have an account?
                 </Typography>
 
-                <Typography sx={styles.signInText}>
+                <Typography
+                    sx={styles.signInText}
+                    onClick={handleSignInClick}
+                >
                     Sign up
                 </Typography>
 

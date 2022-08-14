@@ -15,7 +15,7 @@ const AuthPageSelectedCard = () => {
     if (selectedCard === "Auth") {
         return <LoginCard />
     }
-    else if (selectedCard === "ForgotPassowrd") {
+    else if (selectedCard === "ForgotPassword") {
         return <ForgotPasswordCard />
     }
     else {
