@@ -16,7 +16,7 @@ const NavigationBar = () => {
 
                     <Box sx={styles.buttonsBox}>
                         <Button sx={styles.signUpButton} href='/'>
-                            Sign up
+                            Sign in
                         </Button>
                         <Button sx={styles.registerButton} href='/register'>
                             Register

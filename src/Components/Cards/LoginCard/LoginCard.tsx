@@ -1,13 +1,12 @@
 import React from 'react';
 import { Divider } from '@mui/material';
-import LoginCardCredentialsForm from './LoginCardCredentialsForm/LoginCardCredentialsForm';
-import LoginCardFooter from './LoginCardFooter/LoginCardFooter';
+import { LoginCardForm, LoginCardFooter } from './Index';
 
 const LoginCard = () => {
 
     return (
         <>
-            <LoginCardCredentialsForm />
+            <LoginCardForm />
             <Divider variant="middle" sx={{ width: "80%" }} />
             <LoginCardFooter />
         </>

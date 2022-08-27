@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Container } from '@mui/material';
 import styles from './AuthCard.Styling';
-import AuthCardHeader from './AuthCardHeader/AuthCardHeader';
+import { AuthCardHeader } from './Index';
 
 interface IAuthCardProps {
     children: React.ReactNode;

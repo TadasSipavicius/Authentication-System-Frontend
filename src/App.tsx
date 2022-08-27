@@ -1,8 +1,8 @@
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import NavigationBar from './Components/NavigationBar/NavigationBar';
-import { theme } from './Globals/Theme';
+import { NavigationBar } from './Components/NavigationBar/Index';
+import { theme } from './Globals/Index';
 
 const AuthPage = React.lazy(() => import("./Pages/Auth/Auth.Page"));
 

@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { Box, Typography } from '@mui/material';
-import { AuthSelectedCardContext } from '../../../../Globals/Context';
-import { AuthSelectedCardType } from '../../../../Globals/ContextTypes';
+import { AuthSelectedCardContext, AuthSelectedCardType, CARD_TYPES } from '../../../../Globals/Index';
 import styles from './LoginCardFooter.Styling';
 
 const LoginCardFooter = () => {
@@ -10,12 +9,12 @@ const LoginCardFooter = () => {
 
     const handleForgotPasswordClick = (): void => {
 
-        setSelectedCard('ForgotPassword');
+        setSelectedCard(CARD_TYPES.FORGOT_PASSWORD);
     };
 
     const handleSignInClick = (): void => {
 
-        setSelectedCard('Register');
+        setSelectedCard(CARD_TYPES.REGISTER);
     }
 
     return (

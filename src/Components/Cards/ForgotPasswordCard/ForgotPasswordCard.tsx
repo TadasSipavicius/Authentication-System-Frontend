@@ -1,15 +1,14 @@
 import { Divider } from '@mui/material';
 import React from 'react';
-import ForgotPasswordCredentialsForm from './ForgotPasswordCredentialsForm/ForgotPasswordCredentialsForm';
-import ForgotPasswordFooter from './ForgotPasswordFooter/ForgotPasswordFooter';
+import { ForgotPasswordCardForm, ForgotPasswordCardFooter } from './Index';
 
 const ForgotPasswordCard = () => {
 
     return (
         <>
-            <ForgotPasswordCredentialsForm />
+            <ForgotPasswordCardForm />
             <Divider variant="middle" sx={{ width: "80%" }} />
-            <ForgotPasswordFooter />
+            <ForgotPasswordCardFooter />
         </>
 
     )
