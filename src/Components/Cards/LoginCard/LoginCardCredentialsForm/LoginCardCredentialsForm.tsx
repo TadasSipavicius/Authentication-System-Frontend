@@ -13,6 +13,7 @@ const LoginCardCredentialsForm = () => {
                 <TextField
                     size='small'
                     sx={styles.usernameTextInput}
+                    autoComplete='off'
                 />
             </Box>
 
