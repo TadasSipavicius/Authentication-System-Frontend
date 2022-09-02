@@ -6,19 +6,25 @@ const ForgotPasswordCredentialsForm = () => {
 
     return (
         <>
-            <Box>
-                <Typography >
-                    Forgot  your password?
+            <Box sx={styles.resetPasswordContainer}>
+                <Typography sx={styles.resetPasswordTitle}>
+                    Forgot your password?
                 </Typography>
-                <Typography sx={styles.emailLabel}>
-                    Email address:
+
+                <Typography sx={styles.resetPasswordDescription}>
+                    Enter your registered email below to receive a new password
                 </Typography>
+
+
                 <TextField
+                    sx={styles.resetPasswordEmailTextField}
                     size='small'
+                    placeholder='example@gmail.com'
+                    autoComplete='off'
                 />
             </Box>
 
-            <Button>
+            <Button sx={styles.resetButton}>
                 Send New Password
             </Button>
         </>

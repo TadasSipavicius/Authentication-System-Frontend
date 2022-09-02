@@ -5,6 +5,7 @@ const styles: Record<string, SystemStyleObject> = {
         display: "flex",
         justifyContent: "center",
         marginTop: 5,
+        position: "relative"
     },
     authCard: {
         height: 600,

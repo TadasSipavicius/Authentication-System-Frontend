@@ -7,7 +7,10 @@ const ForgotPasswordCard = () => {
     return (
         <>
             <ForgotPasswordCardForm />
-            <Divider variant="middle" sx={{ width: "80%" }} />
+            <Divider
+                variant="middle"
+                sx={{ width: "80%", marginTop: 3 }}
+            />
             <ForgotPasswordCardFooter />
         </>
 
