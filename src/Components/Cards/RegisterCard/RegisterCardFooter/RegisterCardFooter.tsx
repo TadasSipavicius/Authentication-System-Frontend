@@ -1,9 +1,9 @@
 import { Box, Typography } from '@mui/material';
 import React, { useContext } from 'react';
 import { AuthSelectedCardContext, AuthSelectedCardType, CARD_TYPES } from '../../../../Globals/Index';
-import styles from './ForgotPasswordFooter.Styling';
+import styles from './RegisterCardFooter.Styling';
 
-const ForgotPasswordFooter = () => {
+const RegisterCardFooter = () => {
 
     const { setSelectedCard } = useContext(AuthSelectedCardContext) as AuthSelectedCardType;
 
@@ -12,9 +12,9 @@ const ForgotPasswordFooter = () => {
     };
 
     return (
-        <Box sx={styles.forgotPasswordContainer}>
+        <Box sx={styles.registerContainer}>
             <Typography
-                sx={styles.forgotPasswordLinkToLoginPage}
+                sx={styles.registerLinkToLoginPage}
                 onClick={handleReturnToLoginPageClick}
             >
                 Return to Login page
@@ -23,4 +23,4 @@ const ForgotPasswordFooter = () => {
     )
 }
 
-export default ForgotPasswordFooter;
+export default RegisterCardFooter;

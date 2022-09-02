@@ -1,11 +1,15 @@
+import { Divider } from '@mui/material';
 import React from 'react';
+import { RegisterCardFooter, RegisterCardForm } from './Index';
 
 const RegisterCard = () => {
 
-    return(
-        <div>
-            Register CARD
-        </div>
+    return (
+        <>
+            <RegisterCardForm />
+            <Divider sx={{ width: "80%" }} />
+            <RegisterCardFooter />
+        </>
     )
 }
 

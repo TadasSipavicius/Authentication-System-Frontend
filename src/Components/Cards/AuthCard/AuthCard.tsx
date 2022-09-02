@@ -10,8 +10,8 @@ interface IAuthCardProps {
 const AuthCard = ({ children }: IAuthCardProps) => {
 
     return (
-        <Container fixed sx={styles.authCardContainer}>
-            <Box sx={styles.authCard}>
+        <Container fixed sx={styles().authCardContainer}>
+            <Box sx={styles().authCard}>
                 <AuthCardHeader />
                 {children}
             </Box>
