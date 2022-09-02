@@ -23,6 +23,7 @@ const LoginCardCredentialsForm = () => {
                 <TextField
                     size='small'
                     sx={styles.passowrdTextInput}
+                    type='password'
                 />
             </Box>
 
