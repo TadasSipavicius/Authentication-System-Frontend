@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { AppBar, Box, Button, Container, Link, Toolbar } from '@mui/material';
 import styles from './NavigationBar.Styling';
+import { AuthSelectedCardContext, AuthSelectedCardType, CARD_TYPES } from '../../Globals/Index';
 
 const NavigationBar = () => {
+
+    const { setSelectedCard } = useContext(AuthSelectedCardContext) as AuthSelectedCardType;
+
+    const handleRedirectToRegisterCardForm = () => {
+        setSelectedCard(CARD_TYPES.REGISTER);
+    };
 
     return (
         <AppBar position="sticky" sx={styles.appBar}>
@@ -18,7 +25,10 @@ const NavigationBar = () => {
                         <Button sx={styles.signUpButton} href='/'>
                             Sign in
                         </Button>
-                        <Button sx={styles.registerButton} href='/register'>
+                        <Button
+                            sx={styles.registerButton}
+                            onClick={handleRedirectToRegisterCardForm}
+                        >
                             Register
                         </Button>
                     </Box>

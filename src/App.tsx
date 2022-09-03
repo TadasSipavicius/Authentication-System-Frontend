@@ -1,21 +1,17 @@
-import { CssBaseline, ThemeProvider } from '@mui/material';
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { NavigationBar } from './Components/NavigationBar/Index';
-import { theme } from './Globals/Index';
+import { ThemeProvider } from '@mui/material';
+import React, { useState } from 'react';
+import { AuthSelectedCardContext, CARD_TYPES, MyRoutes, theme } from './Globals/Index';
 
-const AuthPage = React.lazy(() => import("./Pages/Auth/Auth.Page"));
 
 function App() {
+
+  const [selectedCard, setSelectedCard] = useState(CARD_TYPES.LOGIN_CARD);
+
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <NavigationBar />
-
-      <Routes>
-        <Route path='/' element={<AuthPage />} />
-      </Routes>
-
+      <AuthSelectedCardContext.Provider value={{ selectedCard, setSelectedCard }}>
+        <MyRoutes />
+      </AuthSelectedCardContext.Provider>
     </ThemeProvider>
   );
 }
