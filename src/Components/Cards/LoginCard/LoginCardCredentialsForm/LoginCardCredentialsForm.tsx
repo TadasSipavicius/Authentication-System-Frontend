@@ -7,7 +7,7 @@ const LoginCardCredentialsForm = () => {
     return (
         <>
             <Box>
-                <Typography sx={styles.usernameLabel}>
+                <Typography sx={styles.textFieldLabel}>
                     Username
                 </Typography>
                 <TextField
@@ -18,7 +18,7 @@ const LoginCardCredentialsForm = () => {
             </Box>
 
             <Box sx={styles.passowordContainer}>
-                <Typography sx={styles.passwordLabel}>
+                <Typography sx={styles.textFieldLabel}>
                     Password
                 </Typography>
                 <TextField

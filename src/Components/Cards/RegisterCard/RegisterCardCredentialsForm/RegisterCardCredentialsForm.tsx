@@ -5,34 +5,47 @@ import styles from './RegisterCardCredentialsForm.Styling';
 const RegisterCardCredentialsForm = () => {
 
     return (
-        <Box>
+        <>
             <Box>
-                <Typography>
+                <Typography sx={styles.textFieldLabel}>
                     Username
                 </Typography>
-                <TextField />
-                <Typography>
+                <TextField
+                    placeholder='example'
+                    sx={styles.usernameEmailTextInput}
+                />
+
+                <Typography sx={styles.textFieldLabel}>
                     Email
                 </Typography>
-                <TextField />
-                <Typography>
+                <TextField
+                    placeholder='example@gmail.com'
+                    sx={styles.usernameEmailTextInput}
+                />
+
+                <Typography sx={styles.textFieldLabel}>
                     Password
                 </Typography>
                 <TextField
+                    placeholder='6 letters or more'
+                    sx={styles.passwordTextInput}
                     type='password'
                 />
-                <Typography>
+
+                <Typography sx={styles.textFieldLabel}>
                     Confirm Password
                 </Typography>
                 <TextField
+                    placeholder='6 letters or more'
+                    sx={styles.passwordTextInput}
                     type='password'
                 />
             </Box>
 
-            <Button>
+            <Button sx={styles.registerButton}>
                 Register
             </Button>
-        </Box>
+        </>
     )
 }
 

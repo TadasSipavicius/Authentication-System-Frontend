@@ -4,7 +4,7 @@ const styles: Record<string, SystemStyleObject> = {
     registerContainer: {
         marginTop: 2,
         position: "absolute",
-        bottom: 0
+        bottom: 15
     },
     registerLinkToLoginPage: {
         color: "rgba(255,255,255, 1)",

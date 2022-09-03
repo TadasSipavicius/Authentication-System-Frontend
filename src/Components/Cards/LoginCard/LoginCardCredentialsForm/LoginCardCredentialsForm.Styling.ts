@@ -1,7 +1,7 @@
 import { SystemStyleObject } from '@mui/system';
 
 const styles: Record<string, SystemStyleObject> = {
-    usernameLabel: {
+    textFieldLabel: {
         marginLeft: 2.4,
         fontSize: 13,
         color: "white",
@@ -9,6 +9,7 @@ const styles: Record<string, SystemStyleObject> = {
     },
     usernameTextInput: {
         "& .MuiInputBase-root": {
+            height: 40,
             borderRadius: 20,
             backgroundColor: "rgba(255,255,255, 0.7)",
             "&:hover fieldset": {
@@ -21,20 +22,13 @@ const styles: Record<string, SystemStyleObject> = {
             paddingLeft: 2.5,
             fontFamily: "monospace",
         },
-
-
     },
     passowordContainer: {
         marginTop: 2
     },
-    passwordLabel: {
-        marginLeft: 2.4,
-        fontSize: 13,
-        color: "white",
-        letterSpacing: 0.9
-    },
     passowrdTextInput: {
         "& .MuiInputBase-root": {
+            height: 40,
             borderRadius: 20,
             backgroundColor: "rgba(255,255,255, 0.7)",
             "&:hover fieldset": {
