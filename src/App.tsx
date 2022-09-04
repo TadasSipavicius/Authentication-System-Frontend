@@ -1,6 +1,7 @@
 import { ThemeProvider } from '@mui/material';
 import React, { useState } from 'react';
-import { AuthSelectedCardContext, CARD_TYPES, MyRoutes, theme } from './Globals/Index';
+import { AuthSelectedCardContext, CARD_TYPES, theme } from './Globals/Index';
+import MyRoutes from './MyRoutes';
 
 
 function App() {
