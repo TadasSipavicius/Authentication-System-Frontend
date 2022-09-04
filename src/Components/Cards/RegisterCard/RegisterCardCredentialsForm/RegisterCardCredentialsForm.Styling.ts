@@ -18,7 +18,10 @@ const styles: Record<string, SystemStyleObject> = {
             },
         },
         "& .MuiInputBase-input": {
-            width: 300,
+            width: {
+                smallMobile: 265,
+                mobile: 300
+            },
             fontSize: 15,
             paddingLeft: 2.5,
             fontFamily: "monospace",
@@ -35,7 +38,10 @@ const styles: Record<string, SystemStyleObject> = {
             },
         },
         "& .MuiInputBase-input": {
-            width: 300,
+            width: {
+                smallMobile: 265,
+                mobile: 300
+            },
             fontSize: 15,
             paddingLeft: 2.5,
             letterSpacing: 1
@@ -48,7 +54,6 @@ const styles: Record<string, SystemStyleObject> = {
         backgroundImage: "linear-gradient(to right, #ff512f, #f09819)",
         marginTop: 3.5,
         marginBottom: 3.5,
-        textTransform: "uppercase"
     }
 }
 

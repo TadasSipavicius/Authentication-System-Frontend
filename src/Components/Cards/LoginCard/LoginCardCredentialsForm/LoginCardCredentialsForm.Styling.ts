@@ -17,7 +17,10 @@ const styles: Record<string, SystemStyleObject> = {
             },
         },
         "& .MuiInputBase-input": {
-            width: 300,
+            width: {
+                smallMobile: 265,
+                mobile: 300
+            },
             fontSize: 15,
             paddingLeft: 2.5,
             fontFamily: "monospace",
@@ -36,7 +39,10 @@ const styles: Record<string, SystemStyleObject> = {
             },
         },
         "& .MuiInputBase-input": {
-            width: 300,
+            width: {
+                smallMobile: 265,
+                mobile: 300
+            },
             fontSize: 15,
             paddingLeft: 2.5,
             letterSpacing: 1

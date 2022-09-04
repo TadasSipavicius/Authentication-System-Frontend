@@ -20,6 +20,7 @@ const styles: Record<string, SystemStyleObject> = {
     },
     resetPasswordEmailTextField: {
         "& .MuiInputBase-root": {
+            height: 40,
             borderRadius: 20,
             backgroundColor: "rgba(255,255,255, 0.7)",
             "&:hover fieldset": {
@@ -27,7 +28,10 @@ const styles: Record<string, SystemStyleObject> = {
             },
         },
         "& .MuiInputBase-input": {
-            width: 300,
+            width: {
+                smallMobile: 265,
+                mobile: 300
+            },
             fontSize: 15,
             paddingLeft: 2.5,
             fontFamily: "monospace",

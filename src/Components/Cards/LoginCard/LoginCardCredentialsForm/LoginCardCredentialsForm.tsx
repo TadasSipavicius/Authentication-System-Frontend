@@ -11,7 +11,6 @@ const LoginCardCredentialsForm = () => {
                     Username
                 </Typography>
                 <TextField
-                    size='small'
                     sx={styles.usernameTextInput}
                     autoComplete='off'
                 />
@@ -22,7 +21,6 @@ const LoginCardCredentialsForm = () => {
                     Password
                 </Typography>
                 <TextField
-                    size='small'
                     sx={styles.passowrdTextInput}
                     type='password'
                 />
