@@ -6,6 +6,10 @@ export const Routes = {
 
     UserProfile: {
         pathName: '/userProfile'
+    },
+
+    BasketballPlayers: {
+        pathName: '/basketballplayers'
     }
 
 }
