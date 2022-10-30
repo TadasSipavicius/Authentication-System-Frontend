@@ -4,12 +4,12 @@ const styles: Record<string, SystemStyleObject> = {
 
     badge: {
         position: "relative",
-        margin: "1.5em 3em",
+        margin: "25px",
         width: "2.1em",
         height: "2.9em",
         borderRadius: "10px",
         display: "inline-block",
-        top: 0,
+        top: 5,
         transition: "all 0.2s ease",
 
         "&:before, &:after": {

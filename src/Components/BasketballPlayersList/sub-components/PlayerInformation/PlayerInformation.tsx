@@ -3,19 +3,23 @@ import React from 'react';
 
 interface IPlayerInformationProps {
     playerPosition: string;
-    playerPrice: string;
     nextGameTeamName: string;
     playerFullName: string;
 }
 
-const PlayerInformation = ({ playerPosition, playerPrice, nextGameTeamName, playerFullName }: IPlayerInformationProps) => {
+const PlayerInformation = ({ playerPosition, nextGameTeamName, playerFullName }: IPlayerInformationProps) => {
 
     return (
         <Box>
-            <Box>{playerFullName}</Box>
-            <Box>{playerPosition}</Box>
-            <Box>{nextGameTeamName}</Box>
-            <Box>{playerPrice}</Box>
+            <Box sx={{ fontWeight: 600, color: "grey" }}>
+                {playerFullName}
+            </Box>
+            <Box sx={{ fontSize: 12 }}>
+                {playerPosition}
+            </Box>
+            <Box sx={{ fontSize: 13 }}>
+                vs {nextGameTeamName}
+            </Box>
         </Box>
     )
 }

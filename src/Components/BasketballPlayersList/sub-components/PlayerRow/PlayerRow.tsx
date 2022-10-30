@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import React from 'react';
 import { IBasketballPlayer } from '../../../../Interfaces/IBasketballPlayer';
-import { PlayerInformation, PlayerTeam } from '../../Index';
+import { PlayerInformation, PlayerTeam, AddPlayerButton } from '../../Index';
 
 interface IPlayerRowProps {
     basketballPlayer: IBasketballPlayer;
@@ -18,8 +18,10 @@ const PlayerRow = ({ basketballPlayer }: IPlayerRowProps) => {
             <PlayerInformation
                 playerFullName={basketballPlayer.fullName}
                 playerPosition={basketballPlayer.position}
-                playerPrice={basketballPlayer.position}
                 nextGameTeamName={basketballPlayer.opponentTeamName}
+            />
+            <AddPlayerButton
+                playerPrice={basketballPlayer.price}
             />
         </Box>
     )

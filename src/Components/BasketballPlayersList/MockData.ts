@@ -4,14 +4,14 @@ const PlayersData = [
         position: "Guard",
         price: 450000,
         currentTeamShortName: "ŽAL",
-        opponentTeamName: "ALBA"
+        opponentTeamName: "ALBA Berlin"
     },
     {
         fullName: "Kevin Pangos",
         position: "Guard",
         price: 850000,
         currentTeamShortName: "EA7",
-        opponentTeamName: "Žalgiris"
+        opponentTeamName: "Žalgiris Kaunas"
     }
 ]
 
