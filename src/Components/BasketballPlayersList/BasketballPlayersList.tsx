@@ -1,7 +1,8 @@
 import { Box } from '@mui/material';
 import React from 'react';
 import { PlayersData } from './MockData';
-import PlayerRow from './sub-components/PlayerRow';
+import { PlayerRow } from '../BasketballPlayersList/Index';
+
 const BasketballPlayersList = () => {
     return (
         <Box>
