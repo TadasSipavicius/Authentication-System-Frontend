@@ -10,16 +10,18 @@ interface IPlayerRowProps {
 const PlayerRow = ({ basketballPlayer }: IPlayerRowProps) => {
     return (
         <Box
-            sx={{ display: "flex", flexDirection: "row", alignItems: "center" }}
+            sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}
         >
-            <PlayerTeam
-                teamShortName={basketballPlayer.currentTeamShortName}
-            />
-            <PlayerInformation
-                playerFullName={basketballPlayer.fullName}
-                playerPosition={basketballPlayer.position}
-                nextGameTeamName={basketballPlayer.opponentTeamName}
-            />
+            <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
+                <PlayerTeam
+                    teamShortName={basketballPlayer.currentTeamShortName}
+                />
+                <PlayerInformation
+                    playerFullName={basketballPlayer.fullName}
+                    playerPosition={basketballPlayer.position}
+                    nextGameTeamName={basketballPlayer.opponentTeamName}
+                />
+            </Box>
             <AddPlayerButton
                 playerPrice={basketballPlayer.price}
             />

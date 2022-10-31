@@ -7,8 +7,12 @@ interface IAddPlayerButtonProps {
 
 const AddPlayerButton = ({ playerPrice }: IAddPlayerButtonProps) => {
     return (
-        <Box>
-            <Button sx={{color: "black"}}>
+        <Box sx={{ marginRight: 5, width: 100 }}>
+            <Button
+                sx={{ color: "black", width: "100%" }}
+                variant="outlined"
+                color='success'
+            >
                 {playerPrice}$
             </Button>
         </Box>
