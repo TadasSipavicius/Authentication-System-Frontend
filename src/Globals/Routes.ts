@@ -10,6 +10,9 @@ export const Routes = {
 
     BasketballPlayers: {
         pathName: '/basketballplayers'
+    },
+    UserTeams: {
+        pathName: '/teams'
     }
 
 }

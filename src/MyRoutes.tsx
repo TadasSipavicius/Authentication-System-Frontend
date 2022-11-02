@@ -7,6 +7,7 @@ import { Routes as routes } from './Globals/Index';
 const AuthPage = React.lazy(() => import("./Pages/Auth/Auth.Page"));
 const UserProfile = React.lazy(() => import('./Pages/UserProfile/UserProfile.Page'));
 const BasketballPlayers = React.lazy(() => import('./Pages/BasketballPlayers/BasketballPlayers.Page'));
+const UserTeams = React.lazy(() => import('./Pages/UserTeams/UserTeams.Page'));
 
 const MyRoutes = () => {
     return (
@@ -18,6 +19,7 @@ const MyRoutes = () => {
                 <Route path={routes.AuthPage.pathName} element={<AuthPage />} />
                 <Route path={routes.UserProfile.pathName} element={<UserProfile />} />
                 <Route path={routes.BasketballPlayers.pathName} element={<BasketballPlayers />} />
+                <Route path={routes.UserTeams.pathName} element={<UserTeams />} />
             </Routes>
         </Suspense>
     )
