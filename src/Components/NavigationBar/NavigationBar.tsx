@@ -3,15 +3,22 @@ import { AppBar, Box, Button, Container, Link, Toolbar } from '@mui/material';
 import styles from './NavigationBar.Styling';
 import { AuthSelectedCardContext, AuthSelectedCardType, CARD_TYPES, Routes as routes } from '../../Globals/Index';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { Authentication } from '../../Globals/contexts/Context';
+import { Auth } from '../../Globals/contexts/types/ContextTypes';
+import Cookies from 'js-cookie';
 
 const NavigationBar = () => {
 
     const { setSelectedCard, selectedCard } = useContext(AuthSelectedCardContext) as AuthSelectedCardType;
+    const { authenticated, setAuthenticated } = useContext(Authentication) as Auth;
     const location = useLocation();
     const navigate = useNavigate();
 
     const handleLogoClick = () => {
-        
+        if (authenticated.isAuthenticated) {
+            return navigate('/teams')
+        }
+
         if (selectedCard !== CARD_TYPES.LOGIN_CARD) {
             navigate('/');
             setSelectedCard(CARD_TYPES.LOGIN_CARD)
@@ -38,6 +45,16 @@ const NavigationBar = () => {
         setSelectedCard(CARD_TYPES.REGISTER);
     };
 
+    const handleNavigateToTeams = () => {
+        navigate('/teams')
+    }
+
+    const handleLogOut = async () => {
+        Cookies.remove('auth-access-token');
+        setAuthenticated({ isAuthenticated: false, user: null });
+        navigate('/');
+    }
+
     return (
         <AppBar position="static" sx={styles.appBar}>
             <Toolbar disableGutters>
@@ -49,18 +66,38 @@ const NavigationBar = () => {
                     </Box>
 
                     <Box sx={styles.buttonsBox}>
-                        <Button
-                            sx={styles.signUpButton}
-                            onClick={handleRedirectToLoginCardForm}
-                        >
-                            Sign in
-                        </Button>
-                        <Button
-                            sx={styles.registerButton}
-                            onClick={handleRedirectToRegisterCardForm}
-                        >
-                            Register
-                        </Button>
+                        {authenticated.isAuthenticated ? (
+                            <>
+                                <Button
+                                    sx={styles.registerButton}
+                                    onClick={handleNavigateToTeams}
+                                >
+                                    Teams
+                                </Button>
+                                <Button
+                                    sx={styles.registerButton}
+                                    onClick={handleLogOut}
+                                >
+                                    LogOut
+                                </Button>
+                            </>
+
+                        ) : (
+                            <>
+                                <Button
+                                    sx={styles.signUpButton}
+                                    onClick={handleRedirectToLoginCardForm}
+                                >
+                                    Sign in
+                                </Button>
+                                <Button
+                                    sx={styles.registerButton}
+                                    onClick={handleRedirectToRegisterCardForm}
+                                >
+                                    Register
+                                </Button>
+                            </>
+                        )}
                     </Box>
                 </Container>
             </Toolbar>

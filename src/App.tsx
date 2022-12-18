@@ -1,9 +1,10 @@
 import { ThemeProvider } from '@mui/material';
-import React, { useState } from 'react';
+import Cookies from 'js-cookie';
+import React, { useEffect, useState } from 'react';
 import { Authentication } from './Globals/contexts/Context';
 import { AuthSelectedCardContext, CARD_TYPES, theme } from './Globals/Index';
 import MyRoutes from './MyRoutes';
-
+import jwt from 'jwt-decode';
 
 function App() {
 
@@ -11,7 +12,15 @@ function App() {
   const [authenticated, setAuthenticated] = useState({
     isAuthenticated: false,
     user: null
-  })
+  });
+
+  useEffect(() => {
+    const authCookie = Cookies.get('auth-access-token');
+
+    if (authCookie) {
+      setAuthenticated({ isAuthenticated: true, user: jwt(authCookie) })
+    }
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>
