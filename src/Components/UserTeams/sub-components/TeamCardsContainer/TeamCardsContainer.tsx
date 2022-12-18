@@ -1,18 +1,34 @@
 import { Grid } from '@mui/material';
-import React, { Fragment } from 'react';
-import { TeamsData } from '../../MockData';
+import axios from 'axios';
+import Cookies from 'js-cookie';
+import React, { Fragment, useEffect, useState } from 'react';
 import TeamCard from '../TeamCard/TeamCard';
 
 const TeamCardsContainer = () => {
+    const [teamData, setTeamsData] = useState([]);
+
+    useEffect(() => {
+        const retrieveTeamsData = async () => {
+            const response = await axios.get('https://apieurpfantasy.herokuapp.com/api/team', {
+                headers: {
+                    "auth-access-token": Cookies.get('auth-access-token')
+                }
+            })
+            console.log("response", response.data.results)
+            setTeamsData(response.data.results)
+        }
+
+        retrieveTeamsData();
+    }, [])
+
     return (
         <Grid container spacing={2}>
-            {TeamsData.map((team, index) => (
+            {teamData.map((team, index) => (
                 <Fragment key={index}>
                     <TeamCard
                         team={team}
                     />
                 </Fragment>
-
             ))}
         </Grid>
     )

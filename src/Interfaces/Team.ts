@@ -1,5 +1,5 @@
 export interface ITeam {
-    teamName: string;
-    Points: number;
-    ratingPosition: number;
+    ID: number;
+    name: string;
+    points: number;
 }

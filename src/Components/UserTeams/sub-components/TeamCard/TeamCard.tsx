@@ -13,19 +13,19 @@ const TeamCard = ({ team }: ITeamCardProps) => {
                 <CardActionArea>
                     <CardContent sx={{ width: 200, height: 200, position: "relative" }}>
                         <Typography gutterBottom variant="h5" component="div">
-                            {team.teamName}
+                            {team.name}
                         </Typography>
                         <Divider />
 
                         <Box sx={{ position: "absolute", bottom: 10, width: "80%" }}>
                             <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
                                 <Typography sx={{ fontWeight: 600 }} color="text.secondary">Points: </Typography>
-                                <Typography color="text.secondary">{team.Points}</Typography>
+                                <Typography color="text.secondary">{team.points}</Typography>
                             </Box>
                             <Divider />
                             <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
                                 <Typography sx={{ fontWeight: 600 }} color="text.secondary">Rating: </Typography>
-                                <Typography color="text.secondary">{team.ratingPosition}</Typography>
+                                <Typography color="text.secondary">{team.ID}</Typography>
                             </Box>
                         </Box>
 
