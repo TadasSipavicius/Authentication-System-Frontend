@@ -1,10 +1,10 @@
 import React, { Suspense, useContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { NavigationBar } from './Components/NavigationBar/Index';
 import { CssBaseline } from '@mui/material';
 import { Routes as routes } from './Globals/Index';
 import { Authentication } from './Globals/contexts/Context';
 import { Auth } from './Globals/contexts/types/ContextTypes';
+import ResponsiveNavigationBar from './Components/NavigationBar/ResponsiveNavigationBar';
 
 const AuthPage = React.lazy(() => import("./Pages/Auth/Auth.Page"));
 const UserProfile = React.lazy(() => import('./Pages/UserProfile/UserProfile.Page'));
@@ -20,7 +20,7 @@ const MyRoutes = () => {
     return (
         <Suspense fallback={<div>Loading... </div>}>
             <CssBaseline />
-            <NavigationBar />
+            <ResponsiveNavigationBar />
 
             <Routes>
                 <Route path={routes.AuthPage.pathName} element={<AuthPage />} />
