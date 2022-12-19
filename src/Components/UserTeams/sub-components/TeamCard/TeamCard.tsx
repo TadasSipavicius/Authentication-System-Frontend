@@ -1,5 +1,6 @@
 import { Box, Card, CardActionArea, CardContent, Divider, Grid, Typography } from '@mui/material';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ITeam } from '../../../../Interfaces/Team';
 
 interface ITeamCardProps {
@@ -7,10 +8,18 @@ interface ITeamCardProps {
 }
 
 const TeamCard = ({ team }: ITeamCardProps) => {
+    const navigate = useNavigate();
+
+    const handleOnCardClick = (teamID: number) => (e: any) => {
+        navigate(`/teams/${teamID}`)
+    }
+
     return (
         <Grid item>
             <Card>
-                <CardActionArea>
+                <CardActionArea
+                    onClick={handleOnCardClick(team.ID)}
+                >
                     <CardContent sx={{ width: 200, height: 200, position: "relative" }}>
                         <Typography gutterBottom variant="h5" component="div">
                             {team.name}

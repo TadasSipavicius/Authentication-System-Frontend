@@ -49,6 +49,10 @@ const NavigationBar = () => {
         navigate('/teams')
     }
 
+    const handleNavigateTodashboard = () => {
+        navigate('/dashboard')
+    }
+
     const handleLogOut = async () => {
         Cookies.remove('auth-access-token');
         setAuthenticated({ isAuthenticated: false, user: null });
@@ -68,6 +72,14 @@ const NavigationBar = () => {
                     <Box sx={styles.buttonsBox}>
                         {authenticated.isAuthenticated ? (
                             <>
+                                {authenticated.user.roles === "Admin" ? (
+                                    <Button
+                                        sx={styles.registerButton}
+                                        onClick={handleNavigateTodashboard}
+                                    >
+                                        Dashboard
+                                    </Button>
+                                ) : null}
                                 <Button
                                     sx={styles.registerButton}
                                     onClick={handleNavigateToTeams}

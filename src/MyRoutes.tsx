@@ -10,6 +10,8 @@ const AuthPage = React.lazy(() => import("./Pages/Auth/Auth.Page"));
 const UserProfile = React.lazy(() => import('./Pages/UserProfile/UserProfile.Page'));
 const BasketballPlayers = React.lazy(() => import('./Pages/BasketballPlayers/BasketballPlayers.Page'));
 const UserTeams = React.lazy(() => import('./Pages/UserTeams/UserTeams.Page'));
+const SingleTeamPage = React.lazy(() => import('./Pages/SingleTeam/SingleTeam'));
+const DashBoard = React.lazy(() => import('./Pages/DashBoard/DashBoard'));
 
 const MyRoutes = () => {
 
@@ -25,6 +27,8 @@ const MyRoutes = () => {
                 <Route path={routes.UserProfile.pathName} element={<UserProfile />} />
                 <Route path={routes.BasketballPlayers.pathName} element={<BasketballPlayers />} />
                 {authenticated.isAuthenticated ? <Route path={routes.UserTeams.pathName} element={<UserTeams />} /> : null}
+                {authenticated.isAuthenticated ? <Route path='/teams/:id' element={<SingleTeamPage />} /> : null}
+                {authenticated.isAuthenticated && authenticated.user.roles === "Admin" ? <Route path='/dashboard' element={<DashBoard />} /> : null}
             </Routes>
         </Suspense>
     )

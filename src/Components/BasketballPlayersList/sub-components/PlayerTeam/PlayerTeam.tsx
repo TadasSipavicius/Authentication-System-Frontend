@@ -15,7 +15,7 @@ const PlayerTeam = ({ teamShortName }: IPlayerTeamProps) => {
                 <Box sx={styles.circle}>
                     <img src={zalgiris} style={{ fontSize: 2, width: 20, height: 20, zIndex: 10, position: "absolute", top: 5, left: 5 }} alt='zalgiris'/>
                 </Box>
-                <Box sx={styles.ribbon}>{teamShortName}</Box>
+                <Box sx={styles.ribbon}>{teamShortName.slice(0,3)}</Box>
             </Box>
         </Box>
     )
